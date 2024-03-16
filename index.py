@@ -51,7 +51,7 @@ def upload_file():
     model = genai.GenerativeModel('gemini-pro-vision')
     response2 = model.generate_content(img)
     translation = translator.translate(response2.text)
-    return render_template("result.html",a=f"文字來看:{response1.text}  圖片來看:{translation}")
+    return render_template("result.html",a=f"文字來看:{response1.text} <br>圖片來看:{translation}")
 
 
 if __name__ == '__main__':
